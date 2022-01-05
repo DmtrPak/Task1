@@ -21,8 +21,8 @@ for i in data["streams"]:
             if conc in task1_5:
                 task1_5[conc] += 1
             else:
-                task1_5[conc] = 1
-        print(i["name"] + ": " + conc)  
+                task1_5[conc] = 1 
+        check = 0
 
 
         if re.match("...:\/\/239.100.1.6(.*)", i["url"]): #offline (239.100.1.6)
@@ -41,4 +41,6 @@ print(str("Task 1: " + str(task1_1)))
 print(str("Task 2: " + str(task1_2)))
 print(str("Task 3: " + str(task1_3)))
 print(str("Task 4: " + str(task1_4)))
-print(str(task1_5))
+print("Task 5:")
+for key, value in task1_5.items():
+        print(key, value)
